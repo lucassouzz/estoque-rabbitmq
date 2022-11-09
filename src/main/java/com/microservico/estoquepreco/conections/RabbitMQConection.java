@@ -30,7 +30,7 @@ public class RabbitMQConection {
 
     private Binding relacionamento(Queue fila, DirectExchange troca){
         return new Binding(fila.getName(),
-                Binding.DestinationType.EXCHANGE,
+                Binding.DestinationType.QUEUE,
                 troca.getName(),
                 fila.getName(),
                 null);
